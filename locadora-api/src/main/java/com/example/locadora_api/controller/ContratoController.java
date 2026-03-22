@@ -4,10 +4,9 @@ package com.example.locadora_api.controller;
 import com.example.locadora_api.model.Pessoa;
 import com.example.locadora_api.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,6 +14,7 @@ import java.util.List;
 @RequestMapping("/api/contratos")
 @CrossOrigin(origins = "*")
 public class ContratoController {
+
     @Autowired
     private PessoaRepository pessoaRepository;
 
@@ -22,4 +22,5 @@ public class ContratoController {
     public List<Pessoa> listar() {
         return pessoaRepository.findAll();
     }
+
 }

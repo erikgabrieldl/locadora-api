@@ -21,6 +21,7 @@ public class Pessoa {
 
     @Column(name = "dados_bancarios")
     private String dadosBancarios;
+
     private String telefone;
     private String sexo;
 
